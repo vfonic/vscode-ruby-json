@@ -19,7 +19,7 @@ export function activate(context: vscode.ExtensionContext) {
       if (error) {
         // "src/converter.rb:17:in `<main>': Text is not a valid Ruby hash (RuntimeError)"
         const match = error.message.match(/: (.*) \(RuntimeError\)/)
-        return vscode.window.showErrorMessage("ruby-json" + (match?.[1] ? match[1] : error.message))
+        return vscode.window.showErrorMessage("ruby-json: " + (match?.[1] ? match[1] : error.message))
       }
       if (stderr) return vscode.window.showErrorMessage(stderr)
       // vscode.window.showInformationMessage("Converted to JSON: " + stdout)
