@@ -7,6 +7,7 @@ require 'parser/current'
 require 'json'
 
 str = ARGF.read
+raise 'Tried to convert empty string to JSON' if str.empty?
 
 # Use Parser to generate an Abstract Syntax Tree (AST)
 buffer = Parser::Source::Buffer.new('(string)')
@@ -18,4 +19,8 @@ raise 'Text is not a valid Ruby hash' if tree&.type != :hash
 
 hash = eval(str)
 
-print JSON.pretty_generate(hash)
+if str[...-1].include?("\n")
+  print JSON.pretty_generate(hash)
+else
+  print hash.to_json
+end
