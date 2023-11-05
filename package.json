@@ -1,15 +1,15 @@
 {
   "name": "vscode-ruby-json",
   "displayName": "ruby-json",
-  "description": "Convert Ruby rocket hash to JSON",
-  "version": "0.0.1",
+  "description": "Convert Ruby hash rocket to JSON",
+  "version": "1.0.0",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/vfonic/vscode-ruby-json"
   },
   "engines": {
-    "vscode": "^1.84.0"
+    "vscode": "^1.74.0"
   },
   "categories": [
     "Formatters"
@@ -32,7 +32,7 @@
     ]
   },
   "scripts": {
-    "vscode:prepublish": "npm run compile",
+    "vscode:prepublish": "npm run compile && cp ./src/converter.rb ./out",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
@@ -42,7 +42,8 @@
   "devDependencies": {
     "@types/mocha": "^10.0.3",
     "@types/node": "18.x",
-    "@types/vscode": "^1.84.0",
+    "@types/shell-escape": "^0.2.2",
+    "@types/vscode": "^1.74.0",
     "@typescript-eslint/eslint-plugin": "^6.9.0",
     "@typescript-eslint/parser": "^6.9.0",
     "@vscode/test-electron": "^2.3.6",
@@ -52,5 +53,8 @@
     "glob": "^10.3.10",
     "mocha": "^10.2.0",
     "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "shell-escape": "^0.2.0"
   }
 }
