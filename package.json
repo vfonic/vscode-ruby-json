@@ -1,13 +1,25 @@
 {
-  "name": "ruby-json",
+  "name": "vscode-ruby-json",
   "displayName": "ruby-json",
   "description": "Convert Ruby rocket hash to JSON",
   "version": "0.0.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vfonic/vscode-ruby-json"
+  },
   "engines": {
     "vscode": "^1.84.0"
   },
   "categories": [
-    "Other"
+    "Formatters"
+  ],
+  "keywords": [
+    "ruby hash",
+    "hashrocket",
+    "hash rocket",
+    "hash to json",
+    "json"
   ],
   "activationEvents": [],
   "main": "./out/extension.js",
