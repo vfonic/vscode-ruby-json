@@ -14,9 +14,9 @@ Converts to:
 
 ```js
 {
-  "topic" => "heated_debate",
-  "participants" => 7,
-  "owner" => null
+  "topic": "heated_debate",
+  "participants": 7,
+  "owner": null
 }
 ```
 
