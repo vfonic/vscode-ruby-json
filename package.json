@@ -12,6 +12,7 @@
   "engines": {
     "vscode": "^1.74.0"
   },
+  "icon": "icon.jpg",
   "categories": [
     "Formatters"
   ],
