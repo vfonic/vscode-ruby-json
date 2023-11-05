@@ -28,7 +28,7 @@
     "commands": [
       {
         "command": "ruby-json.convertToJson",
-        "title": "Convert to JSON"
+        "title": "ruby-json: Convert to JSON"
       }
     ]
   },
