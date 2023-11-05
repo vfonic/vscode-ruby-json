@@ -7,12 +7,8 @@ export function activate(context: vscode.ExtensionContext) {
     const editor = vscode.window.activeTextEditor
     if (!editor) return vscode.window.showErrorMessage("Can't find open editor")
 
-    let selection = editor.selection
-    let textToConvert = editor.document.getText(selection)
-    if (!textToConvert) {
-      selection = new vscode.Selection(0, 0, editor.document.lineCount, 0)
-      textToConvert = editor.document.getText()
-    }
+    const selection = editor.selection.isEmpty ? new vscode.Selection(0, 0, editor.document.lineCount, 0) : editor.selection
+    const textToConvert = editor.document.getText(selection)
 
     const escapedText = shellEscape([textToConvert])
     cp.exec(`echo ${escapedText} | ruby ${__dirname}/converter.rb`, (error: any, stdout: any, stderr: any) => {
