@@ -8,6 +8,7 @@
     "type": "git",
     "url": "https://github.com/vfonic/vscode-ruby-json"
   },
+  "publisher": "ada-apps",
   "engines": {
     "vscode": "^1.74.0"
   },
