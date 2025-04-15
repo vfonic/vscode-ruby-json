@@ -2,7 +2,7 @@
   "name": "vscode-ruby-json",
   "displayName": "ruby-json",
   "description": "Convert Ruby hash rocket to JSON",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -30,7 +30,7 @@
       {
         "command": "ruby-json.convertToJson",
         "title": "ruby-json: Convert to JSON",
-        "enablement": "editorFocus"
+        "enablement": "!activeEditorGroupEmpty && !editorReadonly"
       }
     ]
   },
